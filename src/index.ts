@@ -89,3 +89,23 @@ enum Category {
 
 let selectedCategory: Category = Category.Lifestyle;
 console.log(selectedCategory);
+
+//Function overloading
+function log(message: string): void;
+function log(object: object): void;
+function log(statusCode: number): void;
+function log(arg: any): void {
+  if (typeof arg === "string") {
+    console.log("This is a simple message");
+  } else if (typeof arg === "number") {
+    console.log(`API response is ${arg}`);
+  } else {
+    console.log(JSON.stringify(arg));
+  }
+}
+
+log("ryan");
+log(201);
+log({ name: "Ryan", age: 27 });
+
+//Classes, objects and constructors
