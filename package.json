@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/indexTwo.ts"
+    "start": "nodemon src/indexThree.ts"
   },
   "keywords": [],
   "author": "",
