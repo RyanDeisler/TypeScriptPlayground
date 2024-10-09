@@ -70,5 +70,22 @@ if (typeof mySalary === "number") {
 let cityNames: string[] = ["new york", "smithtown", "jersey city"];
 console.log(cityNames);
 
-// Tuple types
-// Enum types
+// Tuple types - an array with fixed length and type
+type LoginForm = [string, string];
+let loginForm: LoginForm = ["email@example.com", "pwd"];
+function handleSubmit(loginForm: LoginForm): void {
+  const [email, pwd] = loginForm;
+  console.log(email, pwd, loginForm[0]);
+}
+handleSubmit(loginForm);
+
+// Enum types - named constants
+enum Category {
+  Entertainment = "entertainment",
+  Movies = "movies",
+  Lifestyle = "lifestyle",
+  Food = "food",
+}
+
+let selectedCategory: Category = Category.Lifestyle;
+console.log(selectedCategory);
