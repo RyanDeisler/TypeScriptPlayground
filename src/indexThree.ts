@@ -64,3 +64,18 @@ class AppUtils {
   }
 }
 console.log(AppUtils.baseURL + AppUtils.getExpensesResource());
+
+//union type
+//Allows us to declare a type that can hold many types of values
+
+let expenseId: number | string;
+expenseId = 19;
+console.log(expenseId);
+expenseId = "aString!";
+console.log(expenseId);
+
+function getDataBasedOnExpenseId(expenseId: number | string) {
+  console.log("Fetching the data based on expenseId: ", expenseId);
+}
+getDataBasedOnExpenseId(123);
+getDataBasedOnExpenseId("another string!");
